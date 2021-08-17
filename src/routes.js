@@ -21,5 +21,9 @@ export default (
     <IndexRoute component={MainPage} />
     <Route path="/some/where" component={SomePage} />
     <Route path="/some/otherpage" component={SomeOtherPage} />
+    <Route exact path="/login">
+  <Login />
+</Route>
   </Route>
+  
 );

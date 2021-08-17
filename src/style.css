@@ -15,7 +15,16 @@ h1, p {
 body {
   font-family: "Segoe UI", Tahoma, sans-serif;
   -webkit-font-smoothing: antialiased;
-  background-image: none;
+  background-image: url(http://3.bp.blogspot.com/-HLnrOmalBzQ/UfKSgqFY5lI/AAAAAAAAGJE/ToVXWqijcYE/s1600/Beautiful%2BSpace%2BWallpaper-712230.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0em;
+  width: 100%;
+  height: 100vh;
 }
 
 button {

@@ -3,6 +3,7 @@ import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Title from './Title';
+import LoginForm from './LoginForm'
 
 function preventDefault(event) {
   event.preventDefault();
@@ -18,10 +19,10 @@ export default function Deposits() {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Title>Recent Deposits</Title>
+      
       <Typography component="p" variant="h10">
       
-        
+        <LoginForm />
   
       </Typography>
       <Typography color="textSecondary" className={classes.depositContext}>

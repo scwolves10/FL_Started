@@ -40,14 +40,14 @@ function Copyright() {
   );
 }
 
-const drawerWidth = 240;
+const drawerWidth = 250;
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
   },
   toolbar: {
-    paddingRight: 24, // keep right padding when drawer closed
+    paddingRight:500, // keep right padding when drawer closed
   },
   toolbarIcon: {
     display: 'flex',
@@ -102,7 +102,7 @@ const useStyles = makeStyles((theme) => ({
   },
   appBarSpacer: theme.mixins.toolbar,
   content: {
-    flexGrow: 1,
+    flexGrow: 3,
     height: '100vh',
     overflow: 'auto',
   },
@@ -111,7 +111,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(4),
   },
   paper: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(5),
     display: 'flex',
     overflow: 'auto',
     flexDirection: 'column',
