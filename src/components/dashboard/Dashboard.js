@@ -19,9 +19,13 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { mainListItems, secondaryListItems } from './ListItems';
-import Chart from './Chart';
+import ChartData from './ChartData';
 import Deposits from './Deposits';
 import Orders from './Orders';
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+import CryptoTracker from "./CryptoTracker";
+
 
 function Copyright() {
   return (
@@ -113,10 +117,10 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
   },
   fixedHeight: {
-    height: 240,
+    height: 400,
   },
 }));
-
+const queryClient = new QueryClient();
 export default function Dashboard() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
@@ -127,7 +131,10 @@ export default function Dashboard() {
     setOpen(false);
   };
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
-
+  <QueryClientProvider client={queryClient}>
+    <CryptoTracker cryptoName="bitcoin" />
+    <ReactQueryDevtools />
+  </QueryClientProvider>
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -143,8 +150,9 @@ export default function Dashboard() {
             <MenuIcon />
           </IconButton>
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-            Dashboard
+            Dashboard  
           </Typography>
+          
           <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
               <NotificationsIcon />
@@ -173,10 +181,13 @@ export default function Dashboard() {
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
-            {/* Chart */}
+         
             <Grid item xs={12} md={8} lg={9}>
               <Paper className={fixedHeightPaper}>
-                <Chart />
+              <QueryClientProvider client={queryClient}>
+              <CryptoTracker cryptoName="bitcoin" />
+              <ReactQueryDevtools />
+              </QueryClientProvider>
               </Paper>
             </Grid>
             {/* Recent Deposits */}

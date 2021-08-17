@@ -3,7 +3,6 @@ import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Title from './Title';
-import BTCTracker from './BTCTracker.js';
 
 function preventDefault(event) {
   event.preventDefault();
@@ -22,7 +21,7 @@ export default function Deposits() {
       <Title>Recent Deposits</Title>
       <Typography component="p" variant="h10">
       
-        <BTCTracker />,
+        
   
       </Typography>
       <Typography color="textSecondary" className={classes.depositContext}>

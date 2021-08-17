@@ -15,7 +15,11 @@
     "prepare": "husky install",
     "pre-commit": "lint-staged",
     "prettier": "prettier --write 'src/**/*.{ts,tsx}'",
-    "lint": "next lint"
+    "lint": "next lint",
+    "startreact": "react-scripts start",
+    "buildreact": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -180,9 +184,11 @@
     "assembly": "0.3.1",
     "assemblyscript": "0.19.11",
     "axios": "0.21.1",
-    "bootstrap": "5.1.0",
+    "bootstrap": "^5.1.0",
     "clsx": "1.1.1",
     "cors": "2.8.5",
+    "d3": "^7.0.1",
+    "date-fns": "^2.23.0",
     "eslint": "7.32.0",
     "ethereumjs-abi": "0.6.8",
     "flow": "0.2.3",
@@ -194,12 +200,16 @@
     "react-dom": "17.0.2",
     "react-grid-system": "7.3.1",
     "react-native-web": "0.17.1",
+    "react-query": "^3.19.6",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
     "react-script-tag": "1.1.2",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^4.0.3",
     "react-window": "1.8.6",
     "recharts": "2.1.0",
     "src": "1.1.2",
     "typescript": "4.3.5",
+    "victory": "^35.10.1",
     "web3": "1.5.2",
     "web3-provider": "1.0.0",
     "web3-providers-base": "1.0.0-alpha.1"
